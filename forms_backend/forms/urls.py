@@ -1,7 +1,7 @@
 # urls.py
 from django.urls import path
 from . import views
-from .views import get_ot_data,post_ot_data,admin_registration
+from .views import get_ot_data,post_ot_data,admin_registration,get_formula_data
 from .views import post_recovery_ward_data, get_recovery_ward_data
 from .views import post_nicu_data, get_nicu_data,availabilityofroomsandbeds
 from .views import post_chemo_ward_data, get_chemo_ward_data,post_MICU_data,post_OT_data
@@ -40,5 +40,6 @@ urlpatterns = [
     path('thirdfloor/', post_thirdfloor_data, name='thirdfloor_data'),
     path('post-MICU/', post_MICU_data, name='MICU_data'),
     path('post-OT/', post_OT_data, name='OT_data'),
+    path('formula-data/', get_formula_data, name='get_formula_data'),
     path('availabilityofroomsandbeds/<str:ward>/',availabilityofroomsandbeds, name='availabilityofroomsandbeds'),
 ]
